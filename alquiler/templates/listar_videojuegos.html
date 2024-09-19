@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Lista de videojeugos {% endblock %}
+
+{% block content %}
+        {% for videojuego in videojuegos %}
+            <p>Título: {{ videojuego.titulo }}</p>
+
+        {% endfor %}
+
+    <button><a href="{% url 'añadir_videojuego' %}">Añadir videojuego</a></button>
+    <button><a href="{% url 'registrar_alquiler' %}">Registrar alquier</a></button>
+{% endblock %}

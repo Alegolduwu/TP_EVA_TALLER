@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Generos {% endblock %}
+
+{% block content %}
+    <div class="">
+        {% for genero in generos %}
+        <div class="">
+            <p>{{ genero.nombre }}</p>
+            <button><a href="{% url 'videojuegos_genero' genero.id %}">Videojuegos </a></button>
+        </div>
+        {% empty %}
+            <p>No hay generos registrados todavia </p>
+        {% endfor %}
+    </div>
+    
+{% endblock %}

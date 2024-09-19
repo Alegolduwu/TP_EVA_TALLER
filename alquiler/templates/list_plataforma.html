@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Plataformas  {% endblock %}
+
+{% block content %}
+    <div class="">
+        {% for plataforma in plataformas %}
+        <div class="">
+            <p>{{ plataforma.nombre }}</p>
+            <button><a href="{% url 'videojuegos_plataforma' plataforma.id %}"> videojuegos</a></button>
+        </div>
+        {% empty %}
+            <p>No hay plataformas registradas todavia </p>
+        {% endfor %}
+    </div>
+    
+{% endblock %}

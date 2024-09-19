@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+      <h2>Agregar alquiler</h2>
+      <form method="post">
+         {% csrf_token %}
+         <p>cliente: {{ form.cliente}}</p>
+         <p>videojuego: {{ form.videojuego }}</p>
+         <p>Fecha alquiler: {{ form.fecha_alquiler}}</p>
+         <p>Fecha devolución: {{ form.fecha_devolucion}}</p>
+         <button type="submit">Guardar uwu  </button>
+      </form>
+
+      <p>Lista de alquileres</p>
+      {% for alquiler in alquileres %}
+
+        <p>cliente: {{ alquiler.cliente}}</p>
+        <p>videojuego: {{ alquiler.videojuego }}</p>
+        <p>Fecha alquiler: {{ alquiler.fecha_alquiler}}</p>
+        <p>Fecha devolución: {{ alquiler.fecha_devolucion}}</p>
+         <button><a href="{% url 'finalizar_alquiler' alquiler.id %}">finalizar alquiler </a></button>
+
+      {% empty %}
+         <p>No hay alquileres registradas todavia</p>
+      {% endfor %}
+   </div>
+
+{% endblock %}
