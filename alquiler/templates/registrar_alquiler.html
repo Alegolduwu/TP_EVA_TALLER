@@ -1,25 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
 
-      <h2>Agregar alquiler</h2>
-      <form method="post">
-         {% csrf_token %}
-         <p>cliente: {{ form.cliente}}</p>
-         <p>videojuego: {{ form.videojuego }}</p>
-         <p>Fecha alquiler: {{ form.fecha_alquiler}}</p>
-         <p>Fecha devolución: {{ form.fecha_devolucion}}</p>
-         <button type="submit">Guardar uwu  </button>
-      </form>
+      <h2 class="texto">AGREGAR ALQUILER</h2>
+      <div class="form">
+         <form method="post">
+            {% csrf_token %}
+            <p>Cliente: {{ form.cliente}}</p>
+            <p>Videojuego: {{ form.videojuego }}</p>
+            <p>Fecha alquiler: {{ form.fecha_alquiler}}</p>
+            <p>Fecha devolución: {{ form.fecha_devolucion}}</p>
+            <button type="submit">Guardar uwu</button>
+         </form>
+      </div>
 
-      <p>Lista de alquileres</p>
+      <h2 class="texto">Lista de alquileres</h2>
       {% for alquiler in alquileres %}
-
-        <p>cliente: {{ alquiler.cliente}}</p>
-        <p>videojuego: {{ alquiler.videojuego }}</p>
-        <p>Fecha alquiler: {{ alquiler.fecha_alquiler}}</p>
-        <p>Fecha devolución: {{ alquiler.fecha_devolucion}}</p>
-         <button><a href="{% url 'finalizar_alquiler' alquiler.id %}">finalizar alquiler </a></button>
-
+      <div class="list2">
+         <div class="list5">
+            <p>Cliente: {{ alquiler.cliente}}</p>
+            <p>Videojuego: {{ alquiler.videojuego }}</p>
+            <p>Fecha alquiler: {{ alquiler.fecha_alquiler}}</p>
+            <p>Fecha devolución: {{ alquiler.fecha_devolucion}}</p>
+            <button><a href="{% url 'finalizar_alquiler' alquiler.id %}">finalizar alquiler </a></button>
+         </div>
+      </div>
       {% empty %}
          <p>No hay alquileres registradas todavia</p>
       {% endfor %}

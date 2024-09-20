@@ -1,13 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <p>Videojuegos de {{genero}}</p>
-    <div class="">
+    <h2 class="texto">Videojuegos de {{genero}}</h2>
+    <div class="listt">
         {% for videojuego in videojuegos %}
-        <div class="">
-            <p>{{ videojuego.titulo }}</p>
-            <p>stock: {{ videojuego.stock }}</p>
-            <p>stock: {{ videojuego.plataforma }}</p>
+        <div class="list3">
+            <p class="p">{{ videojuego.titulo }}</p>
+            <p>Stock: {{ videojuego.stock }}</p>
+            <p>Plataforma: {{ videojuego.plataforma }}</p>
         </div>
         {% empty %}
             <p>No hay videojuegos resgistrados </p>

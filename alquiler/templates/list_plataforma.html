@@ -5,9 +5,9 @@
 {% block content %}
     <div class="">
         {% for plataforma in plataformas %}
-        <div class="">
+        <div class="list">
             <p>{{ plataforma.nombre }}</p>
-            <button><a href="{% url 'videojuegos_plataforma' plataforma.id %}"> videojuegos</a></button>
+            <a href="{% url 'videojuegos_plataforma' plataforma.id %}">Videojuegos</a>
         </div>
         {% empty %}
             <p>No hay plataformas registradas todavia </p>

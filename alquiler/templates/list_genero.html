@@ -5,9 +5,9 @@
 {% block content %}
     <div class="">
         {% for genero in generos %}
-        <div class="">
+        <div class="list">
             <p>{{ genero.nombre }}</p>
-            <button><a href="{% url 'videojuegos_genero' genero.id %}">Videojuegos </a></button>
+            <a href="{% url 'videojuegos_genero' genero.id %}">Videojuegos </a>
         </div>
         {% empty %}
             <p>No hay generos registrados todavia </p>

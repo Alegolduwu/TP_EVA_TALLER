@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
- <h2>Agregar juego uwu</h2>
- <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Guardar</button>
- </form>
+ <h2 class="texto">AGREGAR JUEGO UWU</h2>
+ <div class="form">
+   <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Guardar</button>
+   </form>
+</div>
 {% endblock %}

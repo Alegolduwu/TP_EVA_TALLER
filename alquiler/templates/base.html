@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <title>Document</title>
 </head>
 <body>
+        <div id="h2"><a href="{% url 'listar_videojuegos' %}"> Daini Alquileres </a></div>
     <header>
-        <h2> Daini Alquileres </h2>
-        <button><a href="{% url 'list_plataforma' %}">plataformas</a></button>
-        <button><a href="{% url 'list_generos' %}">Generos</a></button>
-        <button><a href="{% url 'listar_videojuegos' %}"> Videojuegos </a></button>
+        <a href="{% url 'list_plataforma' %}">Plataformas</a>
+        <a href="{% url 'list_generos' %}">Géneros</a>
+        <a href="{% url 'añadir_videojuego' %}">Añadir Videojuego</a>
+        <a href="{% url 'registrar_alquiler' %}">Registrar Alquiler</a>
     </header>
     {% block content %}
     {% endblock %}

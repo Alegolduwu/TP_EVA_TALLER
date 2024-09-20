@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #e1a5f3;
+}
+
+#h2{
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+    background-color: #b83edd;
+    padding: 20px;
+    font-weight: bold;
+    
+    
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: white;
+}
+
+.p{
+    font-size: 25px;
+    width: 98%;
+    padding: 10px;
+    background-color: rgb(52, 192, 52);
+    text-transform: uppercase;
+}
+
+header{
+    display: flex;
+    background-color: #5de9c8;
+    font-size: 22px;
+    padding: 20px;
+    justify-content: space-between;
+}
+header a:hover{
+    color: black;
+    font-size: 24px;
+}
+.list{
+    padding: 30px;
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list p{
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+.list a{
+    padding: 10px;
+    background-color: rgb(52, 192, 52);
+    border-radius: 5px;
+}
+
+.texto{
+    font-size: 22px;
+    padding: 20px;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+.texto2{
+    font-size: 18px;
+    padding: 20px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+.list2{
+    display: flex;
+    justify-content: center;
+
+}
+
+.list3{
+    padding: 20px;
+    font-size: 18px;
+}
+
+.list5{
+    padding: 20px;
+    font-size: 18px;
+    background-color: rgb(124, 184, 124);
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.list3 a:hover{
+    color: white;
+}
+form{
+    background-color: rgb(52, 192, 52);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+button{
+    background-color: rgb(31, 80, 31);
+    border: none;
+    padding: 5px;
+    color: white;
+    text-transform: uppercase;
+}
+button a{
+    background-color: rgb(31, 80, 31);
+    border: none;
+    padding: 5px;
+    color: white;
+    text-transform: uppercase;
+}
+
+
+
